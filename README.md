@@ -10,11 +10,9 @@ Bot   → Benign → Allow
 Bot   → Malicious → Contain
 ```
 
-<video src="media/jev-decision-trace.mp4" poster="media/jev-decision-trace-poster.png" controls muted loop playsinline width="100%">
-  Raw input sent to Jev → Jev's typed output → the policy decision the application code derives
-  from it, ending in a blocked request. If your viewer doesn't render inline video, watch it at
-  <a href="media/jev-decision-trace.mp4">media/jev-decision-trace.mp4</a>.
-</video>
+![Raw input sent to Jev, Jev's typed output, and the policy decision the application code derives from it, ending in a blocked request](media/jev-decision-trace.gif)
+
+Full-quality video with playback controls: [`media/jev-decision-trace.mp4`](media/jev-decision-trace.mp4).
 
 ## Run locally
 
