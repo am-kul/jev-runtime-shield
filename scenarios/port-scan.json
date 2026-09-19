@@ -1,0 +1,157 @@
+{
+  "id": "port-scan",
+  "name": "Port scanning",
+  "description": "Synthetic connection records only. No sockets are opened.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "recon",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:21",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 21,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:22",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 22,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:25",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 25,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:53",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 53,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:80",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 80,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:110",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 110,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:143",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 143,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:443",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 443,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:3306",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 3306,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:5432",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 5432,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:6379",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 6379,
+          "destination": "demo.internal"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "network",
+          "path": "local-service:8080",
+          "status": 403,
+          "kind": "network",
+          "method": "TCP",
+          "port": 8080,
+          "destination": "demo.internal"
+        }
+      ]
+    },
+    {
+      "afterMs": 3000,
+      "phase": "intent",
+      "fixture": "port-scan",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

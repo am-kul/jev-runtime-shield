@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.next-test/
+*.tsbuildinfo
+.env
+.env.local
+data/*
+!data/.gitkeep
+test-results/
+playwright-report/
+.DS_Store
+apps/web/next-env.d.ts
+
+# Local documentation, articles, social drafts, and recording assets
+docs/

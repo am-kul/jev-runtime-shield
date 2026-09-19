@@ -1,0 +1,198 @@
+{
+  "provenance": {
+    "type": "authored-demonstration-fixtures",
+    "captured_from_live_jev": false,
+    "description": "Illustrative Jev-style decisions authored for reproducible replay. Not captured responses, measured accuracy, or evidence of Jev performance.",
+    "schema_verified": "2026-09-19"
+  },
+  "decisions": {
+    "normal-human": {
+      "actor": {
+        "label": "HUMAN",
+        "probability": 0.98,
+        "confidence": 0.96,
+        "probabilities": {
+          "HUMAN": 0.98,
+          "BOT": 0.02
+        }
+      },
+      "intent": {
+        "label": "BENIGN",
+        "maliciousProbability": 0.01
+      },
+      "threat": null
+    },
+    "benign-bot": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "BENIGN",
+        "maliciousProbability": 0.02
+      },
+      "threat": null
+    },
+    "vulnerability-probing": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.98,
+        "confidence": 0.96,
+        "probabilities": {
+          "HUMAN": 0.02,
+          "BOT": 0.98
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.96
+      },
+      "threat": {
+        "label": "VULNERABILITY_PROBING",
+        "probability": 0.94,
+        "confidence": 0.8836
+      }
+    },
+    "data-exfiltration": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.99
+      },
+      "threat": {
+        "label": "DATA_EXFILTRATION",
+        "probability": 0.96,
+        "confidence": 0.9024
+      }
+    },
+    "brute-force": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.97
+      },
+      "threat": {
+        "label": "BRUTE_FORCE",
+        "probability": 0.96,
+        "confidence": 0.9024
+      }
+    },
+    "credential-stuffing": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.98
+      },
+      "threat": {
+        "label": "CREDENTIAL_STUFFING",
+        "probability": 0.95,
+        "confidence": 0.893
+      }
+    },
+    "port-scan": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.98
+      },
+      "threat": {
+        "label": "PORT_SCANNING",
+        "probability": 0.97,
+        "confidence": 0.9118
+      }
+    },
+    "dos": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.98
+      },
+      "threat": {
+        "label": "DOS",
+        "probability": 0.97,
+        "confidence": 0.9118
+      }
+    },
+    "ddos": {
+      "actor": {
+        "label": "BOT",
+        "probability": 0.99,
+        "confidence": 0.98,
+        "probabilities": {
+          "HUMAN": 0.01,
+          "BOT": 0.99
+        }
+      },
+      "intent": {
+        "label": "MALICIOUS",
+        "maliciousProbability": 0.99
+      },
+      "threat": {
+        "label": "DDOS",
+        "probability": 0.98,
+        "confidence": 0.9212
+      }
+    },
+    "unusual-benign": {
+      "actor": {
+        "label": "HUMAN",
+        "probability": 0.97,
+        "confidence": 0.94,
+        "probabilities": {
+          "HUMAN": 0.97,
+          "BOT": 0.03
+        }
+      },
+      "intent": {
+        "label": "BENIGN",
+        "maliciousProbability": 0.12
+      },
+      "threat": null
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "brute-force",
+  "name": "Brute force",
+  "description": "Repeated failed authentication against one account.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "recon",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "auth",
+          "path": "/auth/login",
+          "status": 401,
+          "method": "POST",
+          "accountTarget": "alex@acme.com"
+        }
+      ],
+      "repeat": 60
+    },
+    {
+      "afterMs": 3000,
+      "phase": "intent",
+      "fixture": "brute-force",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "normal-human",
+  "name": "Normal human",
+  "description": "Natural navigation. Human, benign, allowed.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "normal",
+      "focus": "sarah@acme.com",
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "afterMs": 1500,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "afterMs": 3000,
+      "fixture": "normal-human",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

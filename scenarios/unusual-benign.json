@@ -1,0 +1,54 @@
+{
+  "id": "unusual-benign",
+  "name": "Unusual, but benign",
+  "description": "An approved first export. Verify the person; preserve the account.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "access",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "auth",
+          "path": "/auth/login",
+          "status": 200,
+          "method": "POST",
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 2000,
+      "phase": "exfiltration",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "exports",
+          "path": "/api/exports",
+          "status": 202,
+          "method": "POST",
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 48219,
+          "approvedExport": true
+        }
+      ]
+    },
+    {
+      "afterMs": 4000,
+      "fixture": "unusual-benign",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

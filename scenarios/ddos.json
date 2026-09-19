@@ -1,0 +1,265 @@
+{
+  "id": "ddos",
+  "name": "Distributed denial of service",
+  "description": "Aggregated synthetic telemetry from 24 fictional sources.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "recon",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-0"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-1"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-2"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-3"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-4"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-5"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-6"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-7"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-8"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-9"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-10"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-11"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-12"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-13"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-14"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-15"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-16"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-17"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-18"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-19"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-20"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-21"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-22"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 500,
+          "sourceId": "synthetic-edge-23"
+        }
+      ]
+    },
+    {
+      "afterMs": 3000,
+      "phase": "intent",
+      "fixture": "ddos",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

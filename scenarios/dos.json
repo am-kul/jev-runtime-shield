@@ -1,0 +1,34 @@
+{
+  "id": "dos",
+  "name": "Denial of service",
+  "description": "One synthetic aggregate. No actual flood traffic.",
+  "durationMs": 8000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "recon",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "search",
+          "path": "/api/search",
+          "status": 503,
+          "kind": "aggregate",
+          "count": 12000
+        }
+      ]
+    },
+    {
+      "afterMs": 3000,
+      "phase": "intent",
+      "fixture": "dos",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 8000,
+      "phase": "complete"
+    }
+  ]
+}

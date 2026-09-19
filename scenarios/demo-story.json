@@ -1,0 +1,913 @@
+{
+  "id": "demo-story",
+  "name": "Recon to exfiltration",
+  "description": "A 25-second story. One evolving actor. A request stopped in flight.",
+  "durationMs": 25000,
+  "steps": [
+    {
+      "afterMs": 0,
+      "phase": "normal",
+      "focus": "sarah@acme.com",
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true
+        }
+      ],
+      "fixture": "normal-human",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 1200,
+      "events": [
+        {
+          "actorId": "maria@acme.com",
+          "actorName": "Maria Garcia",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "maria-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 2500,
+      "events": [
+        {
+          "actorId": "james@acme.com",
+          "actorName": "James Wilson",
+          "category": "reports",
+          "path": "/app/reports",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "james-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 3000,
+      "phase": "benign-bot",
+      "focus": "hubspot@acme.com",
+      "events": [
+        {
+          "actorId": "hubspot@acme.com",
+          "actorName": "HubSpot",
+          "category": "customers",
+          "path": "/api/customers/sync",
+          "status": 200,
+          "method": "SYNC",
+          "authenticated": true
+        }
+      ],
+      "fixture": "benign-bot",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 3800,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "sarah-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 5000,
+      "phase": "recon",
+      "focus": "alex@acme.com",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 3
+    },
+    {
+      "afterMs": 5100,
+      "events": [
+        {
+          "actorId": "hubspot@acme.com",
+          "actorName": "HubSpot",
+          "category": "customers",
+          "path": "/app/customers",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "hubspot-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 5600,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "afterMs": 6300,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "afterMs": 6400,
+      "events": [
+        {
+          "actorId": "maria@acme.com",
+          "actorName": "Maria Garcia",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "maria-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 7100,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "afterMs": 7700,
+      "events": [
+        {
+          "actorId": "james@acme.com",
+          "actorName": "James Wilson",
+          "category": "reports",
+          "path": "/app/reports",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "james-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 7900,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "afterMs": 8700,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/users",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/debug",
+          "status": 401,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/.env",
+          "status": 403,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/internal",
+          "status": 404,
+          "sourceId": "probe-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/api/export",
+          "status": 401,
+          "sourceId": "probe-source"
+        }
+      ],
+      "repeat": 2
+    },
+    {
+      "afterMs": 9000,
+      "phase": "actor",
+      "fixture": "vulnerability-probing",
+      "evaluate": "actor"
+    },
+    {
+      "afterMs": 9000,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "sarah-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 10300,
+      "events": [
+        {
+          "actorId": "hubspot@acme.com",
+          "actorName": "HubSpot",
+          "category": "customers",
+          "path": "/app/customers",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "hubspot-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 11000,
+      "phase": "intent",
+      "fixture": "vulnerability-probing",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 11600,
+      "events": [
+        {
+          "actorId": "maria@acme.com",
+          "actorName": "Maria Garcia",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "maria-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 12900,
+      "events": [
+        {
+          "actorId": "james@acme.com",
+          "actorName": "James Wilson",
+          "category": "reports",
+          "path": "/app/reports",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "james-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 13000,
+      "phase": "access",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "auth",
+          "path": "/auth/login",
+          "status": 200,
+          "method": "POST",
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1001",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1002",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1003",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1004",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1005",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1006",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1007",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1008",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "afterMs": 14200,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "sarah-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 14500,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1001",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1002",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1003",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1004",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1005",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1006",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1007",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers/1008",
+          "status": 200,
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "afterMs": 15500,
+      "events": [
+        {
+          "actorId": "hubspot@acme.com",
+          "actorName": "HubSpot",
+          "category": "customers",
+          "path": "/app/customers",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "hubspot-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 15800,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "admin",
+          "path": "/admin",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "session-source",
+          "sessionId": "alex-session"
+        },
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "api_keys",
+          "path": "/api/keys",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "session-source",
+          "sessionId": "alex-session"
+        }
+      ]
+    },
+    {
+      "afterMs": 16000,
+      "phase": "exfiltration",
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "exports",
+          "path": "/api/exports",
+          "status": 202,
+          "method": "POST",
+          "authenticated": true,
+          "sessionId": "alex-session",
+          "sourceId": "session-source",
+          "records": 48219
+        }
+      ]
+    },
+    {
+      "afterMs": 16800,
+      "events": [
+        {
+          "actorId": "maria@acme.com",
+          "actorName": "Maria Garcia",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "maria-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 18100,
+      "events": [
+        {
+          "actorId": "james@acme.com",
+          "actorName": "James Wilson",
+          "category": "reports",
+          "path": "/app/reports",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "james-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 19000,
+      "phase": "containment",
+      "fixture": "data-exfiltration",
+      "evaluate": "all"
+    },
+    {
+      "afterMs": 19400,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "sarah-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 20700,
+      "events": [
+        {
+          "actorId": "hubspot@acme.com",
+          "actorName": "HubSpot",
+          "category": "customers",
+          "path": "/app/customers",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "hubspot-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 22000,
+      "events": [
+        {
+          "actorId": "maria@acme.com",
+          "actorName": "Maria Garcia",
+          "category": "search",
+          "path": "/app/search",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "maria-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 22500,
+      "events": [
+        {
+          "actorId": "alex@acme.com",
+          "actorName": "Alex Morgan",
+          "category": "customers",
+          "path": "/api/customers",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "session-source",
+          "sessionId": "alex-session"
+        }
+      ]
+    },
+    {
+      "afterMs": 23300,
+      "events": [
+        {
+          "actorId": "james@acme.com",
+          "actorName": "James Wilson",
+          "category": "reports",
+          "path": "/app/reports",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "james-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 24600,
+      "events": [
+        {
+          "actorId": "sarah@acme.com",
+          "actorName": "Sarah Chen",
+          "category": "dashboard",
+          "path": "/app/dashboard",
+          "status": 200,
+          "authenticated": true,
+          "sourceId": "sarah-source"
+        }
+      ]
+    },
+    {
+      "afterMs": 25000,
+      "phase": "complete"
+    }
+  ]
+}
